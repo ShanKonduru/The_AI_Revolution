@@ -1,0 +1,16 @@
+TestCaseID,Description,Environment,InputData,ExpectedResult,ActualResult,PassOrFail
+TC001,Login with valid credentials,Chrome,user=test,Login Successful,Login Successful,Pass
+TC002,Login with invalid credentials,Chrome,user=invalid,Login Failed,Login Failed,Pass
+TC003,Search for product,Firefox,product=laptop,Product found,Product found,Pass
+TC004,Add to cart with empty cart,Edge,product=phone,Item added,Item added,Pass
+TC005,Checkout with invalid address,Chrome,address=invalid,Error message,Error message,Pass
+TC006,Login with no credentials,Chrome,,Error message,Error message,Pass
+TC007,Search for non-existent product,Firefox,product=unknown,Product not found,Product not found,Pass
+TC008,Add to cart with existing items,Edge,product=charger,Item added,Item added,Pass
+TC009,Checkout with valid address,Chrome,address=valid,Order placed,Order placed,Pass
+TC010,Login with special characters,Chrome,user=!@#$,Error message,Error message,Pass
+TC011,Search with empty query,Firefox,,Error message,Error message,Pass
+TC012,Add to cart with large quantity,Edge,quantity=1000,Error message,Error message,Fail
+TC013,Checkout with expired card,Chrome,card=expired,Payment failed,Payment failed,Fail
+TC014,Login with SQL injection,Chrome,user='OR '1'='1',Error message,Error message,Fail
+TC015,Search with script injection,Firefox,product=<script>alert(1)</script>,Error message,Error message,Fail

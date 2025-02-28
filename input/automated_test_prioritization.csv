@@ -1,0 +1,51 @@
+TestCaseID,Description,Environment,InputData,ExpectedResult,ActualResult,PassOrFail
+TC001,Verify login with valid credentials,Chrome,username=testuser,Login successful,Login successful,Pass
+TC002,Check login with invalid password,Firefox,username=testuser&password=wrong,Login failed,Login failed,Pass
+TC003,Search for existing product,Edge,product=laptop,Product found,Product found,Pass
+TC004,Add item to empty shopping cart,Chrome,product=phone,Item added to cart,Item added to cart,Pass
+TC005,Checkout with invalid address,Firefox,address=invalid,Error message displayed,Error message displayed,Pass
+TC006,Login with no credentials,Chrome,,Error message shown,Error message shown,Pass
+TC007,Search for non-existent product,Edge,product=unknown,Product not found,Product not found,Pass
+TC008,Add item to cart with existing items,Firefox,product=charger,Item added,Item added,Pass
+TC009,Checkout with valid address,Chrome,address=valid,Order placed,Order placed,Pass
+TC010,Login with special characters,Edge,username=!@#$,Error message,Error message,Pass
+TC011,Search with empty query,Firefox,,Error message,Error message,Pass
+TC012,Add to cart with large quantity,Chrome,quantity=1000,Error message,Error message,Fail
+TC013,Checkout with expired card,Edge,card=expired,Payment failed,Payment failed,Fail
+TC014,Login with SQL injection,Firefox,username='OR '1'='1',Error message,Error message,Fail
+TC015,Search with script injection,Chrome,product=<script>alert(1)</script>,Error message,Error message,Fail
+TC016,Verify logout functionality,Chrome,,Logout successful,Logout successful,Pass
+TC017,Test password reset with valid email,Firefox,email=test@example.com,Reset link sent,Reset link sent,Pass
+TC018,Check file upload with valid file,Edge,file=valid.txt,File uploaded,File uploaded,Pass
+TC019,Validate form submission with all fields filled,Chrome,name=John&email=john@example.com,Form submitted,Form submitted,Pass
+TC020,Test navigation to product details page,Firefox,product_id=123,Product details displayed,Product details displayed,Pass
+TC021,Verify cart update after item removal,Edge,product_id=123,Cart updated,Cart updated,Pass
+TC022,Test coupon code application,Chrome,coupon=DISCOUNT10,Discount applied,Discount applied,Pass
+TC023,Check order history display,Firefox,,Order history shown,Order history shown,Pass
+TC024,Validate contact form submission with empty fields,Edge,,Error messages displayed,Error messages displayed,Pass
+TC025,Test image display on product page,Chrome,image_id=456,Image displayed,Image displayed,Pass
+TC026,Verify user profile update,Firefox,name=Jane,Profile updated,Profile updated,Pass
+TC027,Check search functionality with partial product name,Edge,product=lap,Products found,Products found,Pass
+TC028,Validate password strength requirements,Chrome,password=weak,Error message shown,Error message shown,Pass
+TC029,Test email subscription functionality,Firefox,email=subscribe@example.com,Subscription successful,Subscription successful,Pass
+TC030,Verify social media login,Edge,provider=facebook,Login successful,Login successful,Pass
+TC031,Check product rating submission,Chrome,rating=5,Rating submitted,Rating submitted,Pass
+TC032,Validate payment processing with valid card,Firefox,card=valid,Payment processed,Payment processed,Pass
+TC033,Test product filtering by price,Edge,price_range=10-50,Products filtered,Products filtered,Pass
+TC034,Verify user registration with existing email,Chrome,email=test@example.com,Error message shown,Error message shown,Fail
+TC035,Check product review display,Firefox,product_id=123,Reviews displayed,Reviews displayed,Pass
+TC036,Validate address update functionality,Edge,address=new,Address updated,Address updated,Pass
+TC037,Test newsletter unsubscribe functionality,Chrome,email=unsubscribe@example.com,Unsubscription successful,Unsubscription successful,Pass
+TC038,Verify user session timeout,Firefox,,Session timed out,Session timed out,Pass
+TC039,Check product sorting by popularity,Edge,,Products sorted,Products sorted,Pass
+TC040,Validate password recovery with invalid email,Chrome,email=wrong@example.com,Error message shown,Error message shown,Fail
+TC041,Verify cart total calculation,Chrome,product_id=123&quantity=2,Total calculated,Total calculated,Pass
+TC042,Test product comparison functionality,Firefox,product_id=123&product_id=456,Products compared,Products compared,Pass
+TC043,Check order cancellation,Edge,order_id=789,Order cancelled,Order cancelled,Pass
+TC044,Validate password change with weak password,Chrome,old_password=valid&new_password=weak,Error message shown,Error message shown,Fail
+TC045,Test product availability check,Firefox,product_id=123,Product available,Product available,Pass
+TC046,Verify user notification settings update,Edge,notification=email,Settings updated,Settings updated,Pass
+TC047,Check product search with special characters,Chrome,product=!@#$,Products found,Products found,Pass
+TC048,Validate payment processing with insufficient funds,Firefox,card=valid,Payment failed,Payment failed,Fail
+TC049,Test product sorting by rating,Edge,,Products sorted,Products sorted,Pass
+TC050,Verify user account deletion,Chrome,,Account deleted,Account deleted,Pass
